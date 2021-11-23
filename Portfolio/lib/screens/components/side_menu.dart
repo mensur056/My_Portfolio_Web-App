@@ -53,7 +53,7 @@ class SideMenu extends StatelessWidget {
                       Expanded(
                         child: AnimatedCircularProgressIndicator(
                           percentage: 0.59,
-                          label: "FireBase",
+                          label: "Firebase",
                         ),
                       ),
                     ],
