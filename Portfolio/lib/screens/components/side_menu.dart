@@ -28,39 +28,43 @@ class SideMenu extends StatelessWidget {
                     title: 'Age',
                     text: '18',
                   ),
-                  Divider(),
-                  Padding(
-                    padding:
-                        const EdgeInsets.symmetric(vertical: defaultPadding),
-                    child: Text('Skills',
-                        style: Theme.of(context).textTheme.subtitle2),
-                  ),
-                  Row(
+                  Column(
                     children: [
-                      Expanded(
-                        child: AnimatedCircularProgressIndicator(
-                          percentage: 0.79,
-                          label: "Flutter",
-                        ),
+                      Divider(),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(
+                            vertical: defaultPadding),
+                        child: Text('Skills',
+                            style: Theme.of(context).textTheme.subtitle2),
                       ),
-                      SizedBox(
-                        width: defaultPadding,
-                      ),
-                      Expanded(
-                        child: AnimatedCircularProgressIndicator(
-                          percentage: 0.87,
-                          label: "Dart",
-                        ),
-                      ),
-                      SizedBox(
-                        width: defaultPadding,
-                      ),
-                      Expanded(
-                        child: AnimatedCircularProgressIndicator(
-                          percentage: 0.59,
-                          label: "Firebase",
-                        ),
-                      ),
+                      Row(
+                        children: [
+                          Expanded(
+                            child: AnimatedCircularProgressIndicator(
+                              percentage: 0.79,
+                              label: "Flutter",
+                            ),
+                          ),
+                          SizedBox(
+                            width: defaultPadding,
+                          ),
+                          Expanded(
+                            child: AnimatedCircularProgressIndicator(
+                              percentage: 0.87,
+                              label: "Dart",
+                            ),
+                          ),
+                          SizedBox(
+                            width: defaultPadding,
+                          ),
+                          Expanded(
+                            child: AnimatedCircularProgressIndicator(
+                              percentage: 0.59,
+                              label: "Firebase",
+                            ),
+                          ),
+                        ],
+                      )
                     ],
                   )
                 ],
