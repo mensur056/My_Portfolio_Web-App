@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:portfilo/constants.dart';
 import 'package:portfilo/screens/components/animated_circular_progress.dart';
 import 'package:portfilo/screens/components/are_info_text.dart';
+import 'package:portfilo/screens/components/coding.dart';
 import 'package:portfilo/screens/components/my_info.dart';
+import 'package:portfilo/screens/components/skills.dart';
 
 class SideMenu extends StatelessWidget {
   @override
@@ -28,45 +30,11 @@ class SideMenu extends StatelessWidget {
                     title: 'Age',
                     text: '18',
                   ),
-                  Column(
-                    children: [
-                      Divider(),
-                      Padding(
-                        padding: const EdgeInsets.symmetric(
-                            vertical: defaultPadding),
-                        child: Text('Skills',
-                            style: Theme.of(context).textTheme.subtitle2),
-                      ),
-                      Row(
-                        children: [
-                          Expanded(
-                            child: AnimatedCircularProgressIndicator(
-                              percentage: 0.79,
-                              label: "Flutter",
-                            ),
-                          ),
-                          SizedBox(
-                            width: defaultPadding,
-                          ),
-                          Expanded(
-                            child: AnimatedCircularProgressIndicator(
-                              percentage: 0.87,
-                              label: "Dart",
-                            ),
-                          ),
-                          SizedBox(
-                            width: defaultPadding,
-                          ),
-                          Expanded(
-                            child: AnimatedCircularProgressIndicator(
-                              percentage: 0.59,
-                              label: "Firebase",
-                            ),
-                          ),
-                        ],
-                      )
-                    ],
-                  )
+                  Skills(),
+                  SizedBox(
+                    height: defaultPadding,
+                  ),
+                  Coding(),
                 ],
               ),
             ),
@@ -76,3 +44,4 @@ class SideMenu extends StatelessWidget {
     );
   }
 }
+
