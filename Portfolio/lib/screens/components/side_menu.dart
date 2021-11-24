@@ -46,16 +46,35 @@ class SideMenu extends StatelessWidget {
                       style: TextStyle(color: Colors.white),
                     ),
                   ),
-                  Row(
-                    children: [SvgPicture.asset('images/check.svg'),
-
-                      Text('Flutter,Dart')
-                    ],
-                  )
+                  KnowledgeText(text: 'Flutter,Dart',),
+                  KnowledgeText(text: 'WebPack,FireBase',),
+                  KnowledgeText(text: 'Git Knowledge',),
                 ],
               ),
             ),
           )
+        ],
+      ),
+    );
+  }
+}
+
+class KnowledgeText extends StatelessWidget {
+  const KnowledgeText({required this.text});
+
+  final String text;
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.only(bottom: defaultPadding/2),
+      child: Row(
+        children: [
+          SvgPicture.asset('images/check.svg'),
+          SizedBox(
+            width: defaultPadding / 2,
+          ),
+          Text(text)
         ],
       ),
     );
