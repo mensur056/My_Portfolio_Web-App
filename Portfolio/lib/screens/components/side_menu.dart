@@ -62,15 +62,34 @@ class SideMenu extends StatelessWidget {
                   Divider(),
                   TextButton(
                     onPressed: () {},
+                    child: FittedBox(
+                      child: Row(
+                        children: [
+                          Text(
+                            'Download CV',
+                            style: TextStyle(
+                                color: Theme.of(context)
+                                    .textTheme
+                                    .bodyText1!
+                                    .color),
+                          ),
+                          SizedBox(
+                            width: defaultPadding / 2,
+                          ),
+                          SvgPicture.asset('images/download.svg')
+                        ],
+                      ),
+                    ),
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(top: defaultPadding/2),
+                    color: Color(0xFF24242E),
                     child: Row(
                       children: [
-                        Text(
-                          'Download CV',
-                          style: TextStyle(
-                              color:
-                                  Theme.of(context).textTheme.bodyText1!.color),
-                        ),SizedBox(width: defaultPadding/2,),
-                        SvgPicture.asset('images/download.svg')
+                        IconButton(
+                          onPressed: () {},
+                          icon: SvgPicture.asset('images/linkedin.svg'),
+                        )
                       ],
                     ),
                   )
