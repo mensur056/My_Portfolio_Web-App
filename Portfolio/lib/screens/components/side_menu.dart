@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:portfilo/constants.dart';
-import 'package:portfilo/screens/components/animated_circular_progress.dart';
+
 import 'package:portfilo/screens/components/are_info_text.dart';
 import 'package:portfilo/screens/components/coding.dart';
 import 'package:portfilo/screens/components/my_info.dart';
@@ -35,6 +37,21 @@ class SideMenu extends StatelessWidget {
                     height: defaultPadding,
                   ),
                   Coding(),
+                  Divider(),
+                  Padding(
+                    padding:
+                        const EdgeInsets.symmetric(vertical: defaultPadding),
+                    child: Text(
+                      'Knowledge',
+                      style: TextStyle(color: Colors.white),
+                    ),
+                  ),
+                  Row(
+                    children: [SvgPicture.asset('images/check.svg'),
+
+                      Text('Flutter,Dart')
+                    ],
+                  )
                 ],
               ),
             ),
@@ -44,4 +61,3 @@ class SideMenu extends StatelessWidget {
     );
   }
 }
-
