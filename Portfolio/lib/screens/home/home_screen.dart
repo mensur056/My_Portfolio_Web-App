@@ -31,7 +31,14 @@ class HomeScreen extends StatelessWidget {
                             color: Colors.white,
                             fontSize: 45,
                             fontWeight: FontWeight.bold)),
-                    MyBuildAnimatedText()
+                    MyBuildAnimatedText(),
+                    ElevatedButton(onPressed: () {},
+                        style: TextButton.styleFrom(
+                            backgroundColor: Colors.orange,
+                            padding: EdgeInsets.symmetric(
+                                vertical: defaultPadding,
+                                horizontal: defaultPadding*2)),
+                        child: Text('EXPLORE NOW',style: TextStyle(color: darkColor),))
                   ],
                 ),
               )
