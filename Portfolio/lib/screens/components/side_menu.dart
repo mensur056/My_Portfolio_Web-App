@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:portfilo/constants.dart';
 import 'package:portfilo/screens/components/are_info_text.dart';
 import 'package:portfilo/screens/components/coding.dart';
@@ -51,7 +52,7 @@ class SideMenu extends StatelessWidget {
                         text: 'Flutter,Dart',
                       ),
                       KnowledgeText(
-                        text: 'WebPack,FireBase',
+                        text: 'WebServer,FireBase',
                       ),
                       KnowledgeText(
                         text: 'Git Knowledge',
@@ -60,10 +61,19 @@ class SideMenu extends StatelessWidget {
                   ),
                   Divider(),
                   TextButton(
-                      onPressed: () {},
-                      child: Row(
-                        children: [Text('Download CV',style: TextStyle(color: Theme.of(context).textTheme.bodyText1!.color),)],
-                      ))
+                    onPressed: () {},
+                    child: Row(
+                      children: [
+                        Text(
+                          'Download CV',
+                          style: TextStyle(
+                              color:
+                                  Theme.of(context).textTheme.bodyText1!.color),
+                        ),SizedBox(width: defaultPadding/2,),
+                        SvgPicture.asset('images/download.svg')
+                      ],
+                    ),
+                  )
                 ],
               ),
             ),
