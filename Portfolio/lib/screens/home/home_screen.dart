@@ -9,7 +9,12 @@ class HomeScreen extends StatelessWidget {
     return MainScreen(children: [
       AspectRatio(
         aspectRatio: 3,
-        child: Image.asset('images2/bg.jpeg'),
+        child: Stack(fit: StackFit.expand, children: [
+          Image.asset(
+            'images2/bg.jpeg',
+            fit: BoxFit.cover,
+          )
+        ]),
       )
     ]);
   }

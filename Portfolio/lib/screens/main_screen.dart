@@ -5,7 +5,8 @@ import 'package:portfilo/screens/components/side_menu.dart';
 class MainScreen extends StatelessWidget {
   final List<Widget> children;
 
-  const MainScreen({ required this.children}) ;
+  const MainScreen({required this.children});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -15,9 +16,19 @@ class MainScreen extends StatelessWidget {
           child: Row(
             children: [
               Expanded(flex: 2, child: SideMenu()),
+              SizedBox(
+                width: defaultPadding,
+              ),
               Expanded(
-                flex: 7,child: SingleChildScrollView(child: Column(children: [...children],),),
-              )
+                flex: 7,
+                child: SingleChildScrollView(
+                  child: Column(
+                    children: [...children],
+                  ),
+                ),
+              ), SizedBox(
+                width: defaultPadding,
+              ),
             ],
           ),
         ),
