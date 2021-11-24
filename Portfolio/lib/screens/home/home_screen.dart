@@ -20,7 +20,7 @@ class HomeScreen extends StatelessWidget {
               ),
               Container(
                 color: darkColor.withOpacity(0.66),
-              )
+              ),Column(children: [Text('Discover My Amazing Art Space!',style: TextStyle(color: Colors.white,fontSize: 45,fontWeight: FontWeight.bold))],)
             ],
           ),
         )
