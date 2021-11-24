@@ -18,7 +18,7 @@ class AreInfoText extends StatelessWidget {
           Text(title),
           Text(
             text,
-            style: TextStyle(color: Colors.white),
+            style: TextStyle(color: Color(0xFF67e015)),
           ),
         ],
       ),
