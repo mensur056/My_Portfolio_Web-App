@@ -35,22 +35,35 @@ class SideMenu extends StatelessWidget {
                     height: defaultPadding,
                   ),
                   Coding(),
-                  Column(crossAxisAlignment: CrossAxisAlignment.start,
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Divider(),
                       Padding(
-                        padding:
-                            const EdgeInsets.symmetric(vertical: defaultPadding),
+                        padding: const EdgeInsets.symmetric(
+                            vertical: defaultPadding),
                         child: Text(
                           'Knowledge',
-                          style: TextStyle(color: Colors.orange,fontSize: 16),
+                          style: TextStyle(color: Colors.orange, fontSize: 16),
                         ),
                       ),
-                      KnowledgeText(text: 'Flutter,Dart',),
-                      KnowledgeText(text: 'WebPack,FireBase',),
-                      KnowledgeText(text: 'Git Knowledge',),
+                      KnowledgeText(
+                        text: 'Flutter,Dart',
+                      ),
+                      KnowledgeText(
+                        text: 'WebPack,FireBase',
+                      ),
+                      KnowledgeText(
+                        text: 'Git Knowledge',
+                      ),
                     ],
                   ),
+                  Divider(),
+                  TextButton(
+                      onPressed: () {},
+                      child: Row(
+                        children: [Text('Download CV',style: TextStyle(color: Theme.of(context).textTheme.bodyText1!.color),)],
+                      ))
                 ],
               ),
             ),
@@ -60,4 +73,3 @@ class SideMenu extends StatelessWidget {
     );
   }
 }
-
