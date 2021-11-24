@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:portfilo/constants.dart';
-
 import 'package:portfilo/screens/components/are_info_text.dart';
 import 'package:portfilo/screens/components/coding.dart';
+import 'package:portfilo/screens/components/knowledge_text.dart';
 import 'package:portfilo/screens/components/my_info.dart';
 import 'package:portfilo/screens/components/skills.dart';
 
@@ -63,24 +61,3 @@ class SideMenu extends StatelessWidget {
   }
 }
 
-class KnowledgeText extends StatelessWidget {
-  const KnowledgeText({required this.text});
-
-  final String text;
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(bottom: defaultPadding/2),
-      child: Row(
-        children: [
-          SvgPicture.asset('images/check.svg'),
-          SizedBox(
-            width: defaultPadding / 2,
-          ),
-          Text(text)
-        ],
-      ),
-    );
-  }
-}
