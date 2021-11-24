@@ -82,14 +82,24 @@ class SideMenu extends StatelessWidget {
                     ),
                   ),
                   Container(
-                    margin: EdgeInsets.only(top: defaultPadding/2),
+                    margin: EdgeInsets.only(top: defaultPadding / 2),
                     color: Color(0xFF24242E),
                     child: Row(
                       children: [
+                        Spacer(),
                         IconButton(
                           onPressed: () {},
                           icon: SvgPicture.asset('images/linkedin.svg'),
-                        )
+                        ),
+                        IconButton(
+                          onPressed: () {},
+                          icon: SvgPicture.asset('images/github.svg'),
+                        ),
+                        IconButton(
+                          onPressed: () {},
+                          icon: SvgPicture.asset('images/dribble.svg'),
+                        ),
+                        Spacer(),
                       ],
                     ),
                   )
