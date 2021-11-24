@@ -37,18 +37,22 @@ class SideMenu extends StatelessWidget {
                     height: defaultPadding,
                   ),
                   Coding(),
-                  Divider(),
-                  Padding(
-                    padding:
-                        const EdgeInsets.symmetric(vertical: defaultPadding),
-                    child: Text(
-                      'Knowledge',
-                      style: TextStyle(color: Colors.white),
-                    ),
+                  Column(crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Divider(),
+                      Padding(
+                        padding:
+                            const EdgeInsets.symmetric(vertical: defaultPadding),
+                        child: Text(
+                          'Knowledge',
+                          style: TextStyle(color: Colors.orange,fontSize: 16),
+                        ),
+                      ),
+                      KnowledgeText(text: 'Flutter,Dart',),
+                      KnowledgeText(text: 'WebPack,FireBase',),
+                      KnowledgeText(text: 'Git Knowledge',),
+                    ],
                   ),
-                  KnowledgeText(text: 'Flutter,Dart',),
-                  KnowledgeText(text: 'WebPack,FireBase',),
-                  KnowledgeText(text: 'Git Knowledge',),
                 ],
               ),
             ),
