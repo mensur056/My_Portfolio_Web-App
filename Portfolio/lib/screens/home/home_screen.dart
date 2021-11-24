@@ -32,27 +32,7 @@ class HomeScreen extends StatelessWidget {
                             color: Colors.white,
                             fontSize: 45,
                             fontWeight: FontWeight.bold)),
-                    DefaultTextStyle(
-                      style: Theme.of(context).textTheme.subtitle!,
-                      child: Row(
-                        children: [
-                          FlutterCodeText(),
-                          SizedBox(
-                            width: defaultPadding,
-                          ),
-                          Text('I build'),
-                          AnimatedTextKit(
-                            animatedTexts: [
-                              TyperAnimatedText(' web and mobile app',speed: Duration(milliseconds: 60)),
-                              TyperAnimatedText(' online and offline app',speed: Duration(milliseconds: 60)),
-                            ],
-                          ),SizedBox(
-                            width: defaultPadding,
-                          ),FlutterCodeText(),
-
-                        ],
-                      ),
-                    )
+                    MyBuildAnimatedText()
                   ],
                 ),
               )
@@ -63,6 +43,7 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
+
 
 class FlutterCodeText extends StatelessWidget {
   const FlutterCodeText({
