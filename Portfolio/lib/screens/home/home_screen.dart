@@ -1,10 +1,9 @@
-import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:portfilo/constants.dart';
+import 'package:portfilo/screens/components/my_build_animated_text.dart';
 import 'package:portfilo/screens/main_screen.dart';
 
 class HomeScreen extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     return MainScreen(
@@ -40,27 +39,6 @@ class HomeScreen extends StatelessWidget {
           ),
         )
       ],
-    );
-  }
-}
-
-
-class FlutterCodeText extends StatelessWidget {
-  const FlutterCodeText({
-    Key? key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Text.rich(
-      TextSpan(text: '<', children: [
-        TextSpan(
-            text: 'flutter',
-            style: TextStyle(
-              color: primaryColor,
-            )),
-        TextSpan(text: '>')
-      ]),
     );
   }
 }
