@@ -1,9 +1,23 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 
-class MyInfo extends StatelessWidget {
-
-
+class MyInfo extends StatefulWidget {
   @override
+  _MyInfoState createState() => _MyInfoState();
+}
+
+class _MyInfoState extends State<MyInfo> {
+ int photoNumber=1;
+ void changeFood() {
+   setState(() {
+    photoNumber = Random().nextInt(3) + 1;
+
+   });
+ }
+
+
+ @override
   Widget build(BuildContext context) {
     return AspectRatio(
       aspectRatio: 1.23,
@@ -11,10 +25,12 @@ class MyInfo extends StatelessWidget {
         color: Color(0xFF242430),
         child: Column(mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [Spacer(flex: 2,),
-            CircleAvatar(
-              radius: 50,
-              backgroundImage:
-              AssetImage('images2/mensur.jpg'),
+            FlatButton(onPressed:changeFood,
+              child: CircleAvatar(
+                radius: 50,
+                backgroundImage:
+                AssetImage('images2/mensur_$photoNumber.jpg'),
+              ),
             ),Spacer(),
             Text(
               'Mənsur Sərxanov',
