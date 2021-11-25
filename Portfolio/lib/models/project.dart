@@ -8,7 +8,7 @@ List<Project> demo_projects = [
   Project(
     title: "I made a calculator - Flutter UI",
     description:
-    "Created to do your daily accounting work",
+    "Created to do your daily accounting work\nClick 'more' for more information",
   ),
   Project(
     title: "I made an app to jot down daily to-dos- Flutter UI",

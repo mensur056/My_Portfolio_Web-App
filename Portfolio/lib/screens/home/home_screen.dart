@@ -36,9 +36,9 @@ class HomeScreen extends StatelessWidget {
               children: [
                 Text(
                   demo_projects[0].title!,
-                  maxLines: 2,
+                  maxLines: 2,overflow: TextOverflow.ellipsis,
                   style: Theme.of(context).textTheme.subtitle2,
-                )
+                ),Text(demo_projects[0].description!)
               ],
             ),
           ),
