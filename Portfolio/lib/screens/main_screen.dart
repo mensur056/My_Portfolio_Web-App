@@ -13,7 +13,7 @@ class MainScreen extends StatelessWidget {
       body: Center(
         child: Container(
           constraints: BoxConstraints(maxWidth: maxWidth),
-          child: Row(
+          child: Row(crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Expanded(flex: 2, child: SideMenu()),
               SizedBox(
