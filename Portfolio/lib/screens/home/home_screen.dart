@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfilo/constants.dart';
 import 'package:portfilo/models/project.dart';
-import 'package:portfilo/screens/components/my_build_animated_text.dart';
 import 'package:portfilo/screens/home/home_banner.dart';
 import 'package:portfilo/screens/main_screen.dart';
 
@@ -73,7 +72,7 @@ class ProjectCard extends StatelessWidget {
           ),
           SizedBox(
             height: defaultPadding,
-          ),
+          ),TextButton(onPressed: (){}, child: Text('See More'))
         ],
       ),
     );
