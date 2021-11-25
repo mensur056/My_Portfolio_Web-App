@@ -25,7 +25,7 @@ class _MyInfoState extends State<MyInfo> {
         color: Color(0xFF242430),
         child: Column(mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [Spacer(flex: 2,),
-            FlatButton(onPressed:changeFood,hoverColor: Color(0xFF242430),
+            FlatButton(onPressed:changeFood,hoverColor: Color(0xFF242430),splashColor: Color(0xFF242430),highlightColor:Color(0xFF242430) ,
               child: CircleAvatar(
                 radius: 50,
                 backgroundImage:
