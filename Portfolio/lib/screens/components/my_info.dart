@@ -11,8 +11,8 @@ class _MyInfoState extends State<MyInfo> {
  int photoNumber=1;
  void changeFood() {
    setState(() {
-    photoNumber = Random().nextInt(4) + 1;
-
+     photoNumber =photoNumber+1;
+    if(photoNumber==5){photoNumber=1;}
    });
  }
 
