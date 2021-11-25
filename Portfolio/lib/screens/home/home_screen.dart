@@ -14,7 +14,8 @@ class HomeScreen extends StatelessWidget {
         SizedBox(
           height: defaultPadding,
         ),
-        Column(crossAxisAlignment: CrossAxisAlignment.start,
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
               'My Project',
@@ -23,7 +24,8 @@ class HomeScreen extends StatelessWidget {
             SizedBox(
               height: defaultPadding,
             ),
-            GridView.builder(physics: NeverScrollableScrollPhysics(),
+            GridView.builder(
+              physics: NeverScrollableScrollPhysics(),
               itemCount: demo_projects.length,
               shrinkWrap: true,
               gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
@@ -31,7 +33,9 @@ class HomeScreen extends StatelessWidget {
                   childAspectRatio: 1.3,
                   crossAxisSpacing: defaultPadding,
                   mainAxisSpacing: defaultPadding),
-              itemBuilder: (context, index) => ProjectCard(),
+              itemBuilder: (context, index) => ProjectCard(
+                project: demo_projects[index],
+              ),
             )
           ],
         )
@@ -43,8 +47,10 @@ class HomeScreen extends StatelessWidget {
 class ProjectCard extends StatelessWidget {
   const ProjectCard({
     required this.project,
-  }) ;
-final Project project;
+  });
+
+  final Project project;
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -53,15 +59,21 @@ final Project project;
       child: Column(
         children: [
           Text(
-            demo_projects[0].title!,
+            project.title!,
             maxLines: 2,
             overflow: TextOverflow.ellipsis,
             style: Theme.of(context).textTheme.subtitle2,
           ),
+          SizedBox(
+            height: defaultPadding,
+          ),
           Text(
-            demo_projects[0].description!,
+            project.description!,
             style: TextStyle(height: 1.5),
-          )
+          ),
+          SizedBox(
+            height: defaultPadding,
+          ),
         ],
       ),
     );
