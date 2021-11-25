@@ -11,7 +11,7 @@ class _MyInfoState extends State<MyInfo> {
  int photoNumber=1;
  void changeFood() {
    setState(() {
-    photoNumber = Random().nextInt(3) + 1;
+    photoNumber = Random().nextInt(4) + 1;
 
    });
  }
@@ -25,7 +25,7 @@ class _MyInfoState extends State<MyInfo> {
         color: Color(0xFF242430),
         child: Column(mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [Spacer(flex: 2,),
-            FlatButton(onPressed:changeFood,
+            FlatButton(onPressed:changeFood,hoverColor: Color(0xFF242430),
               child: CircleAvatar(
                 radius: 50,
                 backgroundImage:
