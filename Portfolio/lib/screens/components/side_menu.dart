@@ -1,4 +1,6 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_linkify/flutter_linkify.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:portfilo/constants.dart';
 import 'package:portfilo/screens/components/are_info_text.dart';
@@ -6,6 +8,9 @@ import 'package:portfilo/screens/components/coding.dart';
 import 'package:portfilo/screens/components/knowledge_text.dart';
 import 'package:portfilo/screens/components/my_info.dart';
 import 'package:portfilo/screens/components/skills.dart';
+import 'dart:async';
+
+import 'package:url_launcher/url_launcher.dart';
 
 class SideMenu extends StatelessWidget {
   @override
@@ -102,7 +107,17 @@ class SideMenu extends StatelessWidget {
                         Spacer(),
                       ],
                     ),
-                  )
+                  ),Center(
+                    child: Linkify(
+                      onOpen: _onOpen,
+                      text: "https://github.com/mensur056",
+                    ),
+                  ),Center(
+                    child: Linkify(
+                      onOpen: _onOpen,
+                      text: "https://www.linkedin.com/feed/",
+                    ),
+                  ),
                 ],
               ),
             ),
@@ -110,5 +125,12 @@ class SideMenu extends StatelessWidget {
         ],
       ),
     );
+  }
+}
+Future<void> _onOpen(LinkableElement link) async {
+  if (await canLaunch(link.url)) {
+    await launch(link.url);
+  } else {
+    throw 'Could not launch $link';
   }
 }
