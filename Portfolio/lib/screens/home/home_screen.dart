@@ -55,7 +55,7 @@ class ProjectCard extends StatelessWidget {
     return Container(
       padding: EdgeInsets.all(defaultPadding),
       color: secondaryColor,
-      child: Column(
+      child: Column(crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
             project.title!,
@@ -72,7 +72,7 @@ class ProjectCard extends StatelessWidget {
           ),
           SizedBox(
             height: defaultPadding,
-          ),TextButton(onPressed: (){}, child: Text('See More'))
+          ),TextButton(onPressed: (){}, child: Text('See More',style: TextStyle(color: Colors.orange),))
         ],
       ),
     );
