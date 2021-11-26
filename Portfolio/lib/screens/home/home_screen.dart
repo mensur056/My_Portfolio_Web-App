@@ -72,7 +72,7 @@ class ProjectCard extends StatelessWidget {
           ),
           SizedBox(
             height: defaultPadding,
-          ),TextButton(onPressed: (){}, child: Text('See More',style: TextStyle(color: Colors.orange),))
+          ),TextButton(onPressed: (){}, child: Text('See More >>',style: TextStyle(color: Colors.orange),))
         ],
       ),
     );
