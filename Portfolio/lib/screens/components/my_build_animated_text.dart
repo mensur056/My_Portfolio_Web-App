@@ -1,6 +1,7 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:portfilo/constants.dart';
+import 'package:portfilo/responsive.dart';
 import 'package:portfilo/screens/components/flutter_code_text.dart';
 
 class MyBuildAnimatedText extends StatelessWidget {
@@ -12,7 +13,7 @@ class MyBuildAnimatedText extends StatelessWidget {
       style: Theme.of(context).textTheme.subtitle!,
       child: Row(
         children: [
-          FlutterCodeText(),
+          if(!Responsive.isMobileLarge(context))FlutterCodeText(),
           SizedBox(
             width: defaultPadding,
           ),

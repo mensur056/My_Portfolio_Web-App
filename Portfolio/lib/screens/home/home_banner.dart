@@ -36,18 +36,26 @@ class HomeBanner extends StatelessWidget {
                       : Theme.of(context).textTheme.headline5!.copyWith(
                           fontWeight: FontWeight.bold, color: Colors.white),
                 ),
+                if (!Responsive.isMobile(context))
+                  const SizedBox(
+                    height: defaultPadding / 2,
+                  ),
                 MyBuildAnimatedText(),
-                ElevatedButton(
-                    onPressed: () {},
-                    style: TextButton.styleFrom(
-                        backgroundColor: Colors.orange,
-                        padding: EdgeInsets.symmetric(
-                            vertical: defaultPadding,
-                            horizontal: defaultPadding * 2)),
-                    child: Text(
-                      'EXPLORE NOW',
-                      style: TextStyle(color: darkColor),
-                    ))
+                SizedBox(
+                  height: defaultPadding,
+                ),
+                if (!Responsive.isMobile(context))
+                  ElevatedButton(
+                      onPressed: () {},
+                      style: TextButton.styleFrom(
+                          backgroundColor: Colors.orange,
+                          padding: EdgeInsets.symmetric(
+                              vertical: defaultPadding,
+                              horizontal: defaultPadding * 2)),
+                      child: Text(
+                        'EXPLORE NOW',
+                        style: TextStyle(color: darkColor),
+                      ))
               ],
             ),
           )
