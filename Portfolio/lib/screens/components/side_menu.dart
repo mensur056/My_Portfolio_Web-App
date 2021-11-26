@@ -1,4 +1,4 @@
-import 'package:flutter/foundation.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_linkify/flutter_linkify.dart';
 import 'package:flutter_svg/svg.dart';
@@ -116,6 +116,11 @@ class SideMenu extends StatelessWidget {
                     child: Linkify(
                       onOpen: _onOpen,
                       text: "https://www.linkedin.com/feed/",
+                    ),
+                  ),Center(
+                    child: Linkify(
+                      onOpen: _onOpen,
+                      text: "https://dribbble.com/Mansur9787",
                     ),
                   ),
                 ],
