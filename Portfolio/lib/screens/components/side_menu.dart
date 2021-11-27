@@ -14,128 +14,130 @@ class SideMenu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
-      child: Column(
-        children: [
-          MyInfo(),
-          Expanded(
-            child: SingleChildScrollView(
-              padding: EdgeInsets.all(defaultPadding),
-              child: Column(
-                children: [
-                  AreInfoText(
-                    title: 'Residence',
-                    text: 'Azerbaijan',
-                  ),
-                  AreInfoText(
-                    title: 'City',
-                    text: 'Baku',
-                  ),
-                  AreInfoText(
-                    title: 'Age',
-                    text: '18',
-                  ),
-                  Skills(),
-                  SizedBox(
-                    height: defaultPadding,
-                  ),
-                  Coding(),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Divider(),
-                      Padding(
-                        padding: const EdgeInsets.symmetric(
-                            vertical: defaultPadding),
-                        child: Text(
-                          'Knowledge',
-                          style: TextStyle(color: Colors.orange, fontSize: 16),
+      child: SafeArea(
+        child: Column(
+          children: [
+            MyInfo(),
+            Expanded(
+              child: SingleChildScrollView(
+                padding: EdgeInsets.all(defaultPadding),
+                child: Column(
+                  children: [
+                    AreInfoText(
+                      title: 'Residence',
+                      text: 'Azerbaijan',
+                    ),
+                    AreInfoText(
+                      title: 'City',
+                      text: 'Baku',
+                    ),
+                    AreInfoText(
+                      title: 'Age',
+                      text: '18',
+                    ),
+                    Skills(),
+                    SizedBox(
+                      height: defaultPadding,
+                    ),
+                    Coding(),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Divider(),
+                        Padding(
+                          padding: const EdgeInsets.symmetric(
+                              vertical: defaultPadding),
+                          child: Text(
+                            'Knowledge',
+                            style: TextStyle(color: Colors.orange, fontSize: 16),
+                          ),
+                        ),
+                        KnowledgeText(
+                          text: 'Flutter,Dart',
+                        ),
+                        KnowledgeText(
+                          text: 'WebServer,FireBase',
+                        ),
+                        KnowledgeText(
+                          text: 'Git Knowledge',
+                        ),
+                      ],
+                    ),
+                    Divider(),
+                    TextButton(
+                      onPressed: () {},
+                      child: FittedBox(
+                        child: Row(
+                          children: [
+                            Text(
+                              'Download CV',
+                              style: TextStyle(
+                                  color: Theme.of(context)
+                                      .textTheme
+                                      .bodyText1!
+                                      .color),
+                            ),
+                            SizedBox(
+                              width: defaultPadding / 2,
+                            ),
+                            SvgPicture.asset('images/download.svg')
+                          ],
                         ),
                       ),
-                      KnowledgeText(
-                        text: 'Flutter,Dart',
-                      ),
-                      KnowledgeText(
-                        text: 'WebServer,FireBase',
-                      ),
-                      KnowledgeText(
-                        text: 'Git Knowledge',
-                      ),
-                    ],
-                  ),
-                  Divider(),
-                  TextButton(
-                    onPressed: () {},
-                    child: FittedBox(
+                    ),
+                    Container(
+                      margin: EdgeInsets.only(top: defaultPadding / 2),
+                      color: Color(0xFF24242E),
                       child: Row(
                         children: [
-                          Text(
-                            'Download CV',
-                            style: TextStyle(
-                                color: Theme.of(context)
-                                    .textTheme
-                                    .bodyText1!
-                                    .color),
+                          Spacer(),
+                          IconButton(
+                            onPressed: () {},
+                            icon: SvgPicture.asset('images/linkedin.svg'),
                           ),
-                          SizedBox(
-                            width: defaultPadding / 2,
+                          IconButton(
+                            onPressed: () {},
+                            icon: SvgPicture.asset('images/github.svg'),
                           ),
-                          SvgPicture.asset('images/download.svg')
+                          IconButton(
+                            onPressed: () {},
+                            icon: SvgPicture.asset('images/dribble.svg'),
+                          ),
+                          Spacer(),
                         ],
                       ),
                     ),
-                  ),
-                  Container(
-                    margin: EdgeInsets.only(top: defaultPadding / 2),
-                    color: Color(0xFF24242E),
-                    child: Row(
-                      children: [
-                        Spacer(),
-                        IconButton(
-                          onPressed: () {},
-                          icon: SvgPicture.asset('images/linkedin.svg'),
-                        ),
-                        IconButton(
-                          onPressed: () {},
-                          icon: SvgPicture.asset('images/github.svg'),
-                        ),
-                        IconButton(
-                          onPressed: () {},
-                          icon: SvgPicture.asset('images/dribble.svg'),
-                        ),
-                        Spacer(),
-                      ],
+                    SizedBox(
+                      height: defaultPadding,
                     ),
-                  ),
-                  SizedBox(
-                    height: defaultPadding,
-                  ),
-                  Center(
-                    child: Linkify(
-                      onOpen: _onOpen,
-                      text: "https://github.com/mensur056",
+                    Center(
+                      child: Linkify(
+                        onOpen: _onOpen,
+                        text: "https://github.com/mensur056",
+                      ),
+                    ), SizedBox(
+                      height: defaultPadding,
                     ),
-                  ), SizedBox(
-                    height: defaultPadding,
-                  ),
-                  Center(
-                    child: Linkify(
-                      onOpen: _onOpen,
-                      text: "https://www.linkedin.com/feed/",
+                    Center(
+                      child: Linkify(
+                        onOpen: _onOpen,
+                        text: "https://www.linkedin.com/feed/",
+                      ),
+                    ), SizedBox(
+                      height: defaultPadding,
                     ),
-                  ), SizedBox(
-                    height: defaultPadding,
-                  ),
-                  Center(
-                    child: Linkify(
-                      onOpen: _onOpen,
-                      text: "https://dribbble.com/Mansur9787",
+                    Center(
+                      child: Linkify(
+                        onOpen: _onOpen,
+                        text: "https://dribbble.com/Mansur9787",
+                      ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
-            ),
-          )
-        ],
+            )
+          ],
+        ),
       ),
     );
   }
