@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_linkify/flutter_linkify.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:portfilo/constants.dart';
 import 'package:portfilo/screens/components/are_info_text.dart';
@@ -7,7 +6,6 @@ import 'package:portfilo/screens/components/coding.dart';
 import 'package:portfilo/screens/components/knowledge_text.dart';
 import 'package:portfilo/screens/components/my_info.dart';
 import 'package:portfilo/screens/components/skills.dart';
-import 'dart:async';
 import 'package:url_launcher/url_launcher.dart';
 
 class SideMenu extends StatelessWidget {
@@ -92,46 +90,22 @@ class SideMenu extends StatelessWidget {
                         children: [
                           Spacer(),
                           IconButton(
-                            onPressed: () {},
+                            onPressed: _linkedURL,
                             icon: SvgPicture.asset('images/linkedin.svg'),
                           ),
                           IconButton(
-                            onPressed: () {},
+                            onPressed: _gitHubUrl,
                             icon: SvgPicture.asset('images/github.svg'),
                           ),
                           IconButton(
-                            onPressed: () {},
+                            onPressed:_dribbleURL ,
                             icon: SvgPicture.asset('images/dribble.svg'),
                           ),
                           Spacer(),
                         ],
                       ),
                     ),
-                    SizedBox(
-                      height: defaultPadding,
-                    ),
-                    Center(
-                      child: Linkify(
-                        onOpen: _onOpen,
-                        text: "https://github.com/mensur056",
-                      ),
-                    ), SizedBox(
-                      height: defaultPadding,
-                    ),
-                    Center(
-                      child: Linkify(
-                        onOpen: _onOpen,
-                        text: "https://www.linkedin.com/feed/",
-                      ),
-                    ), SizedBox(
-                      height: defaultPadding,
-                    ),
-                    Center(
-                      child: Linkify(
-                        onOpen: _onOpen,
-                        text: "https://dribbble.com/Mansur9787",
-                      ),
-                    ),
+
                   ],
                 ),
               ),
@@ -143,10 +117,27 @@ class SideMenu extends StatelessWidget {
   }
 }
 
-Future<void> _onOpen(LinkableElement link) async {
-  if (await canLaunch(link.url)) {
-    await launch(link.url);
+_gitHubUrl() async {
+  const url = "https://github.com/mensur056";
+  if (await canLaunch(url)) {
+    await launch(url);
   } else {
-    throw 'Could not launch $link';
+    throw 'Could not launch $url';
+  }
+}
+_dribbleURL() async {
+  const url = "https://dribbble.com/Mansur9787";
+  if (await canLaunch(url)) {
+    await launch(url);
+  } else {
+    throw 'Could not launch $url';
+  }
+}
+_linkedURL() async {
+  const url = "https://www.linkedin.com/feed/";
+  if (await canLaunch(url)) {
+    await launch(url);
+  } else {
+    throw 'Could not launch $url';
   }
 }
