@@ -16,7 +16,7 @@ class _HomeScreenState extends State<HomeScreen> {
   void changePhoto() {
     setState(() {
       appPhoto = appPhoto + 1;
-      if (appPhoto == 5) {
+      if (appPhoto == 6) {
         appPhoto = 1;
       }
     });
@@ -40,30 +40,24 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
             Row(
               children: [
-                FlatButton(onPressed:changePhoto,
-                  child: Expanded(
-                    child: Container(
-                      child: Image.asset('images3/photo_$appPhoto.png'),
-                    ),
+                Expanded(
+                  child: Container(
+                    child: FlatButton(onPressed:changePhoto,child: Image.asset('images3/photo_$appPhoto.png')),
                   ),
                 ),SizedBox(
                   width: defaultPadding,
                 ),
-                FlatButton(onPressed: (){},
-                  child: Expanded(
-                    child: Container(
-                      child: Image.asset('images3/photo_1.png'),
-                    ),
+                Expanded(
+                  child: Container(
+                    child: FlatButton(onPressed:changePhoto,child: Image.asset('images3/photo_1.png')),
                   ),
                 ),
                 SizedBox(
                   width: defaultPadding,
                 ),
-                FlatButton(onPressed: (){},
-                  child: Expanded(
-                    child: Container(
-                      child: Image.asset('images3/photo_1.png'),
-                    ),
+                Expanded(
+                  child: Container(
+                    child: FlatButton(onPressed:changePhoto,child: Image.asset('images3/photo_1.png')),
                   ),
                 ),
               ],
