@@ -12,12 +12,21 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   int appPhoto=1;
+  int plantApp=1;
 
   void changePhoto() {
     setState(() {
       appPhoto = appPhoto + 1;
       if (appPhoto == 6) {
         appPhoto = 1;
+      }
+    });
+  }
+  void changePlant() {
+    setState(() {
+      plantApp = plantApp + 1;
+      if (plantApp == 6) {
+        plantApp = 1;
       }
     });
   }
