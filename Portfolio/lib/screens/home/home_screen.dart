@@ -13,6 +13,7 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   int appPhoto=1;
   int appCalculator=1;
+  int appMusic=1;
 
   void changePhoto() {
     setState(() {
@@ -27,6 +28,14 @@ class _HomeScreenState extends State<HomeScreen> {
       appCalculator = appCalculator + 1;
       if (appCalculator == 3) {
         appCalculator = 1;
+      }
+    });
+  }
+  void changeMusic() {
+    setState(() {
+      appMusic= appMusic + 1;
+      if (appMusic == 3) {
+        appMusic = 1;
       }
     });
   }
@@ -66,7 +75,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
                 Expanded(
                   child: Container(
-                    child: FlatButton(onPressed:changePhoto,child: Image.asset('images3/photo_1.png')),
+                    child: FlatButton(onPressed:changeMusic,child: Image.asset('images4/music_$appMusic.png')),
                   ),
                 ),
               ],
