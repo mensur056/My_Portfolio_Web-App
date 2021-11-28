@@ -30,9 +30,7 @@ class MyBuildAnimatedText extends StatelessWidget {
 }
 
 class AnimatedText extends StatelessWidget {
-  const AnimatedText({
-    Key? key,
-  }) : super(key: key);
+
 
   @override
   Widget build(BuildContext context) {
