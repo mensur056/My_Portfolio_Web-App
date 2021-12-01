@@ -11,9 +11,9 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  int appPhoto=1;
-  int appCalculator=1;
-  int appMusic=1;
+  int appPhoto = 1;
+  int appCalculator = 1;
+  int appMusic = 1;
 
   void changePhoto() {
     setState(() {
@@ -23,6 +23,7 @@ class _HomeScreenState extends State<HomeScreen> {
       }
     });
   }
+
   void changeCalculator() {
     setState(() {
       appCalculator = appCalculator + 1;
@@ -31,9 +32,10 @@ class _HomeScreenState extends State<HomeScreen> {
       }
     });
   }
+
   void changeMusic() {
     setState(() {
-      appMusic= appMusic + 1;
+      appMusic = appMusic + 1;
       if (appMusic == 3) {
         appMusic = 1;
       }
@@ -49,7 +51,8 @@ class _HomeScreenState extends State<HomeScreen> {
           height: defaultPadding,
         ),
         MyProject(),
-        SingleChildScrollView(scrollDirection: Axis.horizontal,
+        SingleChildScrollView(
+          scrollDirection: Axis.horizontal,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -60,18 +63,34 @@ class _HomeScreenState extends State<HomeScreen> {
               Row(
                 children: [
                   Container(
-                    child: FlatButton(onPressed:changeCalculator,child: Image.asset('images4/calculator_$appCalculator.png')),
-                  ),SizedBox(
-                    width: defaultPadding,
-                  ),
-                  Container(
-                    child: FlatButton(onPressed:changePhoto,child: Image.asset('images3/photo_$appPhoto.png')),
+                    child: FlatButton(
+                        onPressed: changeCalculator,
+                        child: Image.asset(
+                            'images4/calculator_$appCalculator.png')),
                   ),
                   SizedBox(
                     width: defaultPadding,
                   ),
                   Container(
-                    child: FlatButton(onPressed:changeMusic,child: Image.asset('images4/music_$appMusic.png')),
+                    child: FlatButton(
+                        onPressed: changePhoto,
+                        child: Image.asset('images3/photo_$appPhoto.png')),
+                  ),
+                  SizedBox(
+                    width: defaultPadding,
+                  ),
+                  Container(
+                    child: FlatButton(
+                        onPressed: changeMusic,
+                        child: Image.asset('images4/music_$appMusic.png')),
+                  ),
+                  SizedBox(
+                    width: defaultPadding,
+                  ),
+                  Container(
+                    child: FlatButton(
+                        onPressed: changeMusic,
+                        child: Image.asset('images4/music_$appMusic.png')),
                   ),
                 ],
               ),
