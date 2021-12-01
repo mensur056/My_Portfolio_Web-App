@@ -14,6 +14,7 @@ class _HomeScreenState extends State<HomeScreen> {
   int appPhoto = 1;
   int appCalculator = 1;
   int appMusic = 1;
+  int appPlant=1;
 
   void changePhoto() {
     setState(() {
@@ -41,7 +42,14 @@ class _HomeScreenState extends State<HomeScreen> {
       }
     });
   }
-
+  void changePlant() {
+    setState(() {
+      appPlant = appPlant + 1;
+      if (appPlant == 3) {
+        appPlant = 1;
+      }
+    });
+  }
   @override
   Widget build(BuildContext context) {
     return MainScreen(
@@ -89,8 +97,8 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                   Container(
                     child: FlatButton(
-                        onPressed: changeMusic,
-                        child: Image.asset('images4/music_$appMusic.png')),
+                        onPressed: changePlant,
+                        child: Image.asset('images4/plant.png')),
                   ),
                 ],
               ),
