@@ -49,38 +49,34 @@ class _HomeScreenState extends State<HomeScreen> {
           height: defaultPadding,
         ),
         MyProject(),
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              'MyApps',
-              style: Theme.of(context).textTheme.headline6,
-            ),
-            Row(
-              children: [
-                Expanded(
-                  child: Container(
+        SingleChildScrollView(scrollDirection: Axis.horizontal,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                'MyApps',
+                style: Theme.of(context).textTheme.headline6,
+              ),
+              Row(
+                children: [
+                  Container(
                     child: FlatButton(onPressed:changeCalculator,child: Image.asset('images4/calculator_$appCalculator.png')),
+                  ),SizedBox(
+                    width: defaultPadding,
                   ),
-                ),SizedBox(
-                  width: defaultPadding,
-                ),
-                Expanded(
-                  child: Container(
+                  Container(
                     child: FlatButton(onPressed:changePhoto,child: Image.asset('images3/photo_$appPhoto.png')),
                   ),
-                ),
-                SizedBox(
-                  width: defaultPadding,
-                ),
-                Expanded(
-                  child: Container(
+                  SizedBox(
+                    width: defaultPadding,
+                  ),
+                  Container(
                     child: FlatButton(onPressed:changeMusic,child: Image.asset('images4/music_$appMusic.png')),
                   ),
-                ),
-              ],
-            ),
-          ],
+                ],
+              ),
+            ],
+          ),
         )
       ],
     );
