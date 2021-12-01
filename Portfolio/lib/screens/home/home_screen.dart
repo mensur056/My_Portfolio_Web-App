@@ -98,7 +98,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   Container(
                     child: FlatButton(
                         onPressed: changePlant,
-                        child: Image.asset('images4/plant.png')),
+                        child: Image.asset('images4/plant1$appPlant.png')),
                   ),
                 ],
               ),
