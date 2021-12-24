@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 class MyInfo extends StatefulWidget {
@@ -17,6 +16,14 @@ class _MyInfoState extends State<MyInfo> {
       }
     });
   }
+  void changeBack() {
+    setState(() {
+      photoNumber = photoNumber - 1;
+      if (photoNumber == 5) {
+        photoNumber = 1;
+      }
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -30,15 +37,19 @@ class _MyInfoState extends State<MyInfo> {
             Spacer(
               flex: 2,
             ),
-            FlatButton(
-              onPressed: changeFood,
-              hoverColor: Color(0xFF242430),
-              splashColor: Color(0xFF242430),
-              highlightColor: Color(0xFF242430),
-              child: CircleAvatar(
-                radius: 50,
-                backgroundImage: AssetImage('images2/mensur_$photoNumber.jpg'),
-              ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                FlatButton(hoverColor: Colors.,
+                    onPressed: changeBack, child: Icon(Icons.arrow_back_rounded)),
+                CircleAvatar(
+                  radius: 50,
+                  backgroundImage:
+                      AssetImage('images2/mensur_$photoNumber.jpg'),
+                ),
+                FlatButton(
+                    onPressed:changeFood, child: Icon(Icons.arrow_forward_rounded)),
+              ],
             ),
             Spacer(),
             Text(
