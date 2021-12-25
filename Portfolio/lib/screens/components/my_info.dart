@@ -43,7 +43,7 @@ class _MyInfoState extends State<MyInfo> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 FlatButton(
-                    onPressed: changeBack,
+                    onPressed: changeBack,hoverColor: Color(0xFF242430),splashColor: Color(0xFF242430),highlightColor: Color(0xFF242430),
                     child: Icon(Icons.arrow_back_rounded)),
                 CircleAvatar(
                   radius: 50,
@@ -51,7 +51,7 @@ class _MyInfoState extends State<MyInfo> {
                       AssetImage('images2/mensur_$photoNumber.jpg'),
                 ),
                 FlatButton(
-                    onPressed: changeFood,
+                    onPressed: changeFood,hoverColor:Color(0xFF242430),splashColor: Color(0xFF242430),highlightColor: Color(0xFF242430),
                     child: Icon(Icons.arrow_forward_rounded)),
               ],
             ),
