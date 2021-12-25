@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfilo/constants.dart';
 
 class MyInfo extends StatefulWidget {
   @override
@@ -10,17 +11,18 @@ class _MyInfoState extends State<MyInfo> {
 
   void changeFood() {
     setState(() {
-      photoNumber = photoNumber + 1;
+      photoNumber++;
       if (photoNumber == 5) {
         photoNumber = 1;
       }
     });
   }
+
   void changeBack() {
     setState(() {
-      photoNumber = photoNumber - 1;
-      if (photoNumber == 5) {
-        photoNumber = 1;
+      photoNumber--;
+      if (photoNumber == 1) {
+        photoNumber=4;
       }
     });
   }
@@ -40,15 +42,17 @@ class _MyInfoState extends State<MyInfo> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                FlatButton(hoverColor: Colors.,
-                    onPressed: changeBack, child: Icon(Icons.arrow_back_rounded)),
+                FlatButton(
+                    onPressed: changeBack,
+                    child: Icon(Icons.arrow_back_rounded)),
                 CircleAvatar(
                   radius: 50,
                   backgroundImage:
                       AssetImage('images2/mensur_$photoNumber.jpg'),
                 ),
                 FlatButton(
-                    onPressed:changeFood, child: Icon(Icons.arrow_forward_rounded)),
+                    onPressed: changeFood,
+                    child: Icon(Icons.arrow_forward_rounded)),
               ],
             ),
             Spacer(),
