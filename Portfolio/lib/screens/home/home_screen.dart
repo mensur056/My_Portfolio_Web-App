@@ -114,7 +114,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     child: FlatButton(
                         onPressed: changeCalculator,
                         child: Image.asset(
-                            'images4/calculator_$appCalculator.png')),
+                            'images4/calcu_$appCalculator.png')),
                   ),
                 ],
               ),
