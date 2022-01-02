@@ -14,14 +14,24 @@ class _HomeScreenState extends State<HomeScreen> {
   int appGetitDone = 1;
   int appCalculator = 1;
   int appMusic = 1;
-  int appPlant=1;
-  int appShop=1;
+  int appPlant = 1;
+  int appShop = 1;
+  int appSpotify = 1;
 
   void changePhoto() {
     setState(() {
       appGetitDone = appGetitDone + 1;
       if (appGetitDone == 6) {
         appGetitDone = 1;
+      }
+    });
+  }
+
+  void changeSpotify() {
+    setState(() {
+      appSpotify = appSpotify + 1;
+      if (appSpotify == 6) {
+        appSpotify = 1;
       }
     });
   }
@@ -43,6 +53,7 @@ class _HomeScreenState extends State<HomeScreen> {
       }
     });
   }
+
   void changePlant() {
     setState(() {
       appPlant = appPlant + 1;
@@ -51,6 +62,7 @@ class _HomeScreenState extends State<HomeScreen> {
       }
     });
   }
+
   void changeShop() {
     setState(() {
       appShop = appShop + 1;
@@ -59,6 +71,7 @@ class _HomeScreenState extends State<HomeScreen> {
       }
     });
   }
+
   @override
   Widget build(BuildContext context) {
     return MainScreen(
@@ -84,7 +97,6 @@ class _HomeScreenState extends State<HomeScreen> {
                         onPressed: changeShop,
                         child: Image.asset('images4/shop_$appShop.png')),
                   ),
-
                   SizedBox(
                     width: defaultPadding,
                   ),
@@ -108,13 +120,22 @@ class _HomeScreenState extends State<HomeScreen> {
                     child: FlatButton(
                         onPressed: changePlant,
                         child: Image.asset('images4/plant1$appPlant.png')),
-                  ),SizedBox(
+                  ),
+                  SizedBox(
                     width: defaultPadding,
-                  ),  Container(
+                  ),
+                  Container(
                     child: FlatButton(
                         onPressed: changeCalculator,
-                        child: Image.asset(
-                            'images4/calcu_$appCalculator.png')),
+                        child: Image.asset('images4/calcu_$appCalculator.png')),
+                  ),
+                  SizedBox(
+                    width: defaultPadding,
+                  ),
+                  Container(
+                    child: FlatButton(
+                        onPressed: changeSpotify,
+                        child: Image.asset('images4/spoti_$appSpotify.png')),
                   ),
                 ],
               ),
