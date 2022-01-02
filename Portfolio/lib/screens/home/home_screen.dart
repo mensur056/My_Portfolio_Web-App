@@ -81,66 +81,66 @@ class _HomeScreenState extends State<HomeScreen> {
           height: defaultPadding,
         ),
         MyProject(),
-        SingleChildScrollView(
-          scrollDirection: Axis.horizontal,
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                'MyApps',
-                style: Theme.of(context).textTheme.headline6,
-              ),
-              Row(
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              'MyApps',
+              style: Theme.of(context).textTheme.headline6,
+            ),
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
                 children: [
                   Container(
-                    child: FlatButton(
-                        onPressed: changeShop,
+                    child: GestureDetector(
+                        onTap: changeShop,
                         child: Image.asset('images4/shop_$appShop.png')),
                   ),
                   SizedBox(
                     width: defaultPadding,
                   ),
                   Container(
-                    child: FlatButton(
-                        onPressed: changePhoto,
+                    child: GestureDetector(
+                        onTap: changePhoto,
                         child: Image.asset('images3/photo_$appGetitDone.png')),
                   ),
                   SizedBox(
                     width: defaultPadding,
                   ),
                   Container(
-                    child: FlatButton(
-                        onPressed: changeMusic,
-                        child: Image.asset('images4/music_$appMusic.png')),
+                    child: GestureDetector(
+                        onTap: changeSpotify,
+                        child: Image.asset('images4/spoti_$appSpotify.png')),
                   ),
                   SizedBox(
                     width: defaultPadding,
                   ),
                   Container(
-                    child: FlatButton(
-                        onPressed: changePlant,
+                    child: GestureDetector(
+                        onTap: changePlant,
                         child: Image.asset('images4/plant1$appPlant.png')),
                   ),
                   SizedBox(
                     width: defaultPadding,
                   ),
                   Container(
-                    child: FlatButton(
-                        onPressed: changeCalculator,
+                    child: GestureDetector(
+                        onTap: changeCalculator,
                         child: Image.asset('images4/calcu_$appCalculator.png')),
                   ),
                   SizedBox(
                     width: defaultPadding,
                   ),
                   Container(
-                    child: FlatButton(
-                        onPressed: changeSpotify,
-                        child: Image.asset('images4/spoti_$appSpotify.png')),
+                    child: GestureDetector(
+                        onTap: changeMusic,
+                        child: Image.asset('images4/music_$appMusic.png')),
                   ),
                 ],
               ),
-            ],
-          ),
+            ),
+          ],
         )
       ],
     );
